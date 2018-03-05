@@ -33,9 +33,10 @@ entropiaTotal <- function(data,tipos){
   return(et)
 }
 
-#la data debe estar en una matriz
-#definir tipos de variable, vector de 1 y 0, 1=continua, 0=discreta
-#devuelve el numero de la variable que menos influye
+#The data should be in a matrix
+#It is necessary to define the attribute type, and put it in a vector (ordered by the variable number) where 1 = continuous, 0 = discrete.
+#Returns a vector
+
 variableQueMenosAporta <- function(matrixData, tipos){
   entropiaTotalDatos <- entropiaTotal(matrixData, tipos)
   nregistros = nrow(matrixData)
